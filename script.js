@@ -7,7 +7,7 @@
 // console.log (launchDay, launchHours, launchMinuts, launchSeconds)
 
 // 777341000
-let countDownDate = new Date().getTime() + 777341000;
+let countDownDate = new Date().getTime() + 3660000;
 // console.log (countDownDate)
 
 let x = setInterval(function(){
@@ -18,12 +18,21 @@ let x = setInterval(function(){
 
   var distance = countDownDate - now;
   console.log(distance) 
-    
 
-  var launchDay = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var launchHours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var launchMinuts = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var launchSeconds = Math.floor((distance % (1000 * 60)) / 1000);
+let seconds = 1000
+let minutes = seconds * 60
+let hours = minutes * 60
+let day = hours * 24
+
+
+  var launchDay = Math.floor(distance / day);
+  console.log(launchDay)
+  var launchHours = Math.floor((distance % day) / hours);
+  console.log(launchHours)
+  var launchMinuts = Math.floor((distance % hours) / minutes);
+  console.log(launchMinuts)
+  var launchSeconds = Math.floor((distance % minutes) / seconds);
+  console.log(launchSeconds)
     
 document.getElementById("day").innerText = launchDay
 document.getElementById("hours").innerText = launchHours
