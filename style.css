@@ -137,18 +137,14 @@ span {
     transform: translate(-50%, -50%);
 }
 
-#icons:hover  {
-background-color: #fb5e84;
+.social svg :hover {
+fill: #fb5e84;
 cursor: pointer;
 }
 
 .footer {
     position: relative;
 }
-
-
-
-
 
 .pattern-hills {
     width: 100%;
