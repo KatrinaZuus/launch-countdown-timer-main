@@ -60,9 +60,10 @@ console.log (day, hours, minuts, seconds)
 
 x = setInterval(()=>{
 
-  if (day == 0 && hours == 0 && minuts == 0 && seconds ==0) {
-      clearInterval (x)
-    }
+  // if (day == 0 && hours == 0 && minuts == 0 && seconds ==0) { 
+  //   clearInterval (x)
+      
+  //   }
     if (hours == 0 && day>0){ 
       day--
       hours = 23
@@ -74,8 +75,12 @@ x = setInterval(()=>{
     if (seconds == 0 && minuts >0) {
       seconds = 59
       minuts--
-    }   seconds--
-  
+    }  
+    if (day == 0 && hours == 0 && minuts == 0 && seconds == 0) {
+       seconds == 0
+       clearInterval (x)
+    } else seconds--
+
   
 
 
@@ -85,6 +90,6 @@ x = setInterval(()=>{
   document.getElementById("minuts").innerText = minuts
   document.getElementById("seconds").innerText = seconds
 
-
+  
 
 }, 1000)
